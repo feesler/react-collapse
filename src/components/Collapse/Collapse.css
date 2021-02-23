@@ -1,0 +1,50 @@
+.collapse {
+  margin: 0.5rem 0;
+}
+
+.collapse__toggle-btn {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+  cursor: pointer;
+}
+
+.collapse__toggle-btn:focus {
+  outline: none;
+}
+
+.collapse__title {
+  margin-right: 0.5rem;
+  border: 0 none;
+  border-bottom: 1px dashed #888888;
+}
+
+.collapse__toggle-btn::after {
+  content: "▽";
+}
+
+.collapse_expanded .collapse__toggle-btn::after {
+  content: "△";
+}
+
+.collapse_animated .collapse__content {
+  transition: all 0.5s;
+}
+
+.collapse__content {
+  height: 0;
+  overflow: hidden;
+  visibility: collapse;
+  opacity: 0;
+}
+
+.collapse__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.collapse_expanded .collapse__content {
+  visibility: visible;
+  opacity: 1;
+}
